@@ -16,20 +16,10 @@
     "default_title": "codereview.gpt",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "activeTab",
-    "storage",
-    "scripting"
-  ],
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
-  },
+  "permissions": ["activeTab", "storage", "scripting"],
   "host_permissions": [
     "https://*.githubusercontent.com/",
     "https://gitlab.com/"
   ],
-  "optional_host_permissions": [
-    "https://*/*"
-  ]
+  "optional_host_permissions": ["https://*/*"]
 }
