@@ -113,13 +113,19 @@ async function reviewPR(diffPath, context, title) {
   promptArray.push(`The change has the following title: ${title}.
 
     Your task is:
-    - Review the code changes and provide feedback.
-    - If there are any bugs, highlight them.
-    - Provide details on missed use of best-practices.
-    - Does the code do what it says in the commit messages?
-    - Do not highlight minor issues and nitpicks.
-    - Use bullet points if you have multiple comments.
-    - Provide security recommendations if there are any.
+    - Review this PR for code quality and adherence to our coding standards.
+    - Check the following code for consistent formatting and style guidelines.
+    - Evaluate the functionality of this code. Are there any logical errors or potential issues?
+    - Does this implementation meet the specified requirements?
+    - Assess the performance implications of this code. Are there any bottlenecks?
+    - Suggest optimizations for this code to improve performance.
+    - Is this code readable and maintainable? Suggest improvements.
+    - Identify any sections of the code that are hard to understand or might be difficult to maintain.
+    - Review the test coverage of this PR. Are there sufficient tests for the new code?
+    - Suggest additional test cases that might be necessary for this implementation.
+    - Check this code for potential security vulnerabilities. Are there any security best practices that are not being followed in this code?
+    - Provide general feedback on this PR. What are the strengths and areas for improvement?
+    - Finally, summarize the key points that should be addressed in this PR before it can be approved.
 
     You are provided with the code changes (diffs) in a unidiff format.
     Do not provide feedback yet. I will follow-up with a description of the change in a new message.`);
